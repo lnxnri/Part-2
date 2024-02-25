@@ -161,15 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba6bf9657ac03d042aface5f1a290013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: []
-  newPointThreshold: 0.2
-  lastPosition: {x: 0, y: 0}
-  lineRenderer: {fileID: 0}
-  rigidbody: {fileID: 0}
-  currentPosition: {x: 0, y: 0}
-  speed: 1
-  timerValue: 0
-  spriteRenderer: {fileID: 0}
 --- !u!50 &461197211
 Rigidbody2D:
   serializedVersion: 4
@@ -209,11 +200,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef3d89dab2fa6d4d97737eae9801857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
   horizontalMovement: 15
   inputHorizontal: 0
   movement: {x: 0, y: 0}
   animator: {fileID: 461197208}
+  movementCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1976830248
 GameObject:
   m_ObjectHideFlags: 0
