@@ -15,6 +15,8 @@ public class Witch : MonoBehaviour
     Animator animators;
     public AnimationCurve movementCurve;
     private float yPosition = -4f;
+    public float jumpForce = 5f;
+    public bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
@@ -52,10 +54,11 @@ public class Witch : MonoBehaviour
         {
             animators.SetTrigger("attack");
         }
+        if (Input.GetMouseButtonUp(1))
+        {
+            animators.SetTrigger("hurt");
+        }
         animators.SetFloat("Speed", movement.magnitude);
         rb.MovePosition(rb.position + movement.normalized * horizontalMovement * Time.deltaTime);
-        
     }
-   
-   
 }
