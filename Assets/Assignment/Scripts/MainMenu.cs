@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void LoadNextScene()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextScene = (currentSceneIndex + 1) % SceneManager.sceneCountInBuildSettings;
+        SceneManager.LoadScene(nextScene);
     }
 }
